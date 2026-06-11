@@ -11,7 +11,7 @@ La aplicación se encuentra desplegada en la nube y es completamente funcional. 
 ## 🚀 Características Principales (Backend Highlights)
 
 * **Autenticación y Autorización Compleja (RBAC):** Sistema de roles dinámico (Admin, Jefatura, Secretaría, Docente, Alumno, Tutor Legal). Implementación de **JWT (JSON Web Tokens)** con soporte para usuarios multi-rol.
-* **Arquitectura Multicapa (N-Tier):** Separación estricta de responsabilidades (`Controllers`, `Services`, `Repositories`).
+* **Arquitectura Multicapa:** Separación estricta de responsabilidades (`Controllers`, `Services`, `Repositories`).
 * **Patrón DTO y Mappers:** Aislamiento total de las entidades de base de datos. La API solo expone y recibe Data Transfer Objects (DTOs).
 * **Integridad Transaccional:** Reglas de negocio estrictas gestionadas en la capa de servicios (ej. bloqueo de inserción de calificaciones si el acta de evaluación está en estado `CERRADA`).
 * **Automatización de Eventos:** Triggers lógicos en el backend para el cálculo automático de porcentajes de ausencias y generación de notificaciones pasivas ante eventos críticos (superación de umbrales de faltas, nuevos partes disciplinarios, publicación de notas).
@@ -31,7 +31,7 @@ La aplicación se encuentra desplegada en la nube y es completamente funcional. 
 El sistema cuenta con un modelo relacional altamente normalizado para evitar redundancias y gestionar relaciones complejas:
 
 * **Núcleo de Horarios (`SesionHoraria`):** Entidad central que resuelve la confluencia de múltiples relaciones `1:N` (Docente, Grupo, Asignatura, Franja Horaria). Permite validar conflictos de disponibilidad.
-* **Núcleo Académico (`Matricula`):** Mantiene el histórico del alumno, cruzando Alumno, Año Académico, Asignatura y Grupo.
+* **Núcleo Académico (`Matricula`):** Manne el histórico del alumno, cruzando Alumno, Año Académico, Asignatura y Grupo.
 
 ## ⚙️ Estructura del Proyecto
 
